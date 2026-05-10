@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Marème Soda DIOP – Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Cutive+Mono&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    html {
+      font-family: 'Open Sans', sans-serif;
+      background: whitesmoke;
+    }
+    a { text-decoration: none; color: black; }
+    hr { background: grey; }
+    #container { position: relative; display: flex; }
+    #profile {
+      flex: 15%;
+      display: block;
+      position: relative;
+      margin: 5% 2% 0 10%;
+      width: 100%;
+      height: 100%;
+    }
+    #profile-photo {
+      width: 100%;
+      height: 100%;
+      border-radius: 80%;
+      object-fit: cover;
+    }
+    #info-cards {
+      flex: 55%;
+      display: block;
+      margin-top: 5%;
+      margin-right: 10%;
+      width: 100%;
+      height: 100%;
+    }
+    #image { position: relative; overflow: hidden; }
+    #image, #profile-photo {
+      position: relative;
+      width: 80%;
+      height: 80%;
+      border-radius: 20px;
+    }
+    #image > a {
+      position: absolute; top: 0; left: 0;
+      background: rgba(0,0,0,0.5) !important;
+      height: 100%; width: 100%; display: none;
+    }
+    #image > a > i { -webkit-text-stroke: 1px #ffffffdd; padding: 40%; }
+    #image:hover a { display: block; }
+    #name { font-size: 23px !important; line-height: 20px !important; }
+    #about, .card > ul > li {
+      padding: 0 0 0 15px;
+      position: relative;
+      display: inline-block;
+      width: 100%;
+    }
+    #about { font-size: 20px !important; padding: 0 !important; }
+    #name, #about > p { font-weight: bolder; font-family: 'Open Sans', sans-serif; }
+    #email {
+      font-size: 15px !important;
+      font-weight: bold !important;
+      font-family: 'Cutive Mono', monospace;
+    }
+    #college, #email, #year-graduation, #education, #more-about, #telephone, #address {
+      color: #555;
+      font-size: 13.5px;
+    }
+    strong, span { color: black; font-size: 16px; }
+    #social-links, #about { display: inline-block; }
+    #social-links { margin-bottom: 12px; }
+    #social-links a { margin: 0 10px; }
+    #edit-intro { display: block; color: #097bbf; font-family: 'Nunito', sans-serif; }
+    .fab { font-size: 1.1em; }
+    .fab, .fas { color: whitesmoke; }
+    #about > a { top: 4px; right: 8px; }
+    .edit { top: 19px; right: 10px; }
+    #about > a, .edit { position: absolute; font-size: 15px !important; }
+    .stroke-transparent { -webkit-text-stroke: 1px #000; -webkit-text-fill-color: transparent; }
+    .blue { color: #097bbf !important; font-size: 13px; }
+    .stroke-transparent-blue { -webkit-text-stroke: 1px #097bbf; -webkit-text-fill-color: transparent; }
+    .card {
+      box-shadow: 0 3px 10px 0 rgba(0,0,0,.1);
+      overflow-x: hidden;
+      margin-bottom: 30px;
+      padding: 15px 30px 30px 30px;
+      background-color: #fff;
+    }
+    .card > p { color: #0e141e; font-weight: bolder; font-size: 18px; line-height: 2; }
+    .card > p > i { font-size: 18px; }
+    .card > a {
+      font-weight: 400; font-size: 15px; margin: 0; margin-left: 25px;
+      padding: 0; border: 0; height: auto; background: transparent;
+      color: #097bbf; outline: none; cursor: pointer;
+    }
+    .card > ul { list-style-type: none; }
+    .tags { font-size: 17px; font-weight: bolder; }
+    .tags ~ a { display: none !important; }
+    .tags span { font-size: 14px; font-weight: normal; color: #0e141e; }
+    .tags span span { color: #738f93; }
+    .skills-grid {
+      display: flex; flex-wrap: wrap; gap: 8px;
+      padding: 10px 0 0 0; list-style: none;
+    }
+    .skills-grid li {
+      background: #e8f4fd; color: #097bbf;
+      padding: 5px 14px; border-radius: 20px;
+      font-size: 13.5px; font-weight: 600;
+      display: inline-block; width: auto;
+    }
+    @media screen and (max-width:1090px) { #profile { margin-left: 5%; } }
+    @media screen and (max-width:850px) {
+      #container { display: block; }
+      #profile { width: 90%; }
+      .card { margin: 0 5%; margin-bottom: 30px; }
+    }
+  </style>
+</head>
+<body>
+  <div id="inner-nav"></div>
+  <div id="container">
+
+    <!-- LEFT: Profile panel -->
+    <div id="profile">
+      <div id="image">
+        <img id="profile-photo" src="image_originale.jpg" alt="Profile-Image">
+        <a href="#"><i class="fas fa-pen stroke-transparent"></i></a>
+      </div>
+
+      <p id="name">Marème Soda DIOP<br>
+        <span id="email">mareme.s.diop@aims-senegal.org</span>
+      </p>
+
+      <p id="designation">Computer Security Student<br>
+        <span id="college">African Institute for Mathematical Sciences, Senegal</span>
+      </p>
+
+      <div id="social-links">
+        <a href="#"><i class="fab fa-facebook-f stroke-transparent"></i></a>
+        <a href="#"><i class="fab fa-twitter stroke-transparent"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in stroke-transparent"></i></a>
+        <a href="#"><i class="fab fa-github stroke-transparent"></i></a>
+      </div>
+
+      <a id="edit-intro" href="#"><i class="fas fa-pen-alt blue"></i>&nbsp;&nbsp;Edit Intro</a>
+      <hr width="100%">
+
+      <div id="about">
+        <p style="display:inline;">About</p>
+        <a href="#"><i class="fas fa-pen stroke-transparent-blue"></i></a>
+      </div>
+
+      <p id="year-graduation">Expected Graduation<br><strong>February, 2027</strong></p>
+
+      <p id="education">Education<br>
+        <strong>Master in Computer Security, AIMS Senegal</strong>
+      </p>
+
+      <p id="more-about">Thesis topic<br>
+        <span>Zero-Knowledge Proofs (ZKP) based on Euclidean lattices</span>
+      </p>
+
+      <p id="telephone">Telephone<br><strong>+221 78 129 89 58</strong></p>
+
+      <p id="address">Address<br>
+        <strong>Km 2 routes de Joal (Centre IRD Mbour), Mbour, Senegal</strong>
+      </p>
+    </div>
+
+    <!-- RIGHT: Info cards -->
+    <div id="info-cards">
+
+      <!-- About / Profile -->
+      <div class="card">
+        <p><i class="fas fa-user stroke-transparent"></i>&nbsp;&nbsp;&nbsp;Professional Profile</p>
+        <p style="font-size:14.5px; font-weight:normal; color:#444; line-height:1.7; padding-left:25px;">
+          Computer Security student at AIMS Senegal and completing a Master's in Mathematics &amp; Applications (specialisation: Algebra). Passionate about data science, cryptography, and financial modelling, with a focus on applying mathematical and computational methods to real-world problems and contributing to Africa's technological development.
+        </p>
+      </div>
+
+      <!-- Education -->
+      <div class="card">
+        <p><i class="fas fa-graduation-cap stroke-transparent"></i>&nbsp;&nbsp;&nbsp;Education</p>
+        <ul>
+          <li>
+            <p class="tags">AIMS Senegal – Mbour<br>
+              <span>Master in Computer Security (ongoing) | <span>10/2025 – 02/2027</span></span>
+            </p>
+          </li>
+          <li>
+            <p class="tags">Université Iba Der THIAM – Thiès<br>
+              <span>Master in Applied Mathematics, specialisation Algebra (thesis ongoing) | <span>04/2022 – present</span></span>
+            </p>
+          </li>
+          <li>
+            <p class="tags">Université Iba Der THIAM – Thiès<br>
+              <span>Bachelor in Mathematics &amp; Computer Science | <span>11/2018 – 02/2022</span></span>
+            </p>
+          </li>
+          <li>
+            <p class="tags">Lycée Seydina Issa Laye<br>
+              <span>Baccalauréat, Série S1 | <span>2018</span></span>
+            </p>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Projects -->
+      <div class="card">
+        <p><i class="fas fa-project-diagram stroke-transparent"></i>&nbsp;&nbsp;&nbsp;Project Experiences</p>
+        <ul>
+          <li>
+            <p class="tags">Network Forensics &amp; Botnet Analysis<br>
+              <span>AIMS | <span>02/2026</span></span>
+            </p>
+            <ul style="list-style:disc; padding-left:20px; margin-top:6px;">
+              <li style="font-size:13.5px; color:#444; width:auto; padding:2px 0;">Analysed real network traffic using TShark and PCAP datasets</li>
+              <li style="font-size:13.5px; color:#444; width:auto; padding:2px 0;">Detected malware propagation via HTTP, IRC, and email traffic</li>
+              <li style="font-size:13.5px; color:#444; width:auto; padding:2px 0;">Identified suspicious communication patterns and malicious domains</li>
+            </ul>
+          </li>
+          <li style="margin-top:15px;">
+            <p class="tags">IoT-Based Smart Agriculture Monitoring<br>
+              <span>AIMS | <span>03/2026</span></span>
+            </p>
+            <ul style="list-style:disc; padding-left:20px; margin-top:6px;">
+              <li style="font-size:13.5px; color:#444; width:auto; padding:2px 0;">Designed a secure IoT architecture for real-time agricultural monitoring</li>
+              <li style="font-size:13.5px; color:#444; width:auto; padding:2px 0;">Implemented secure data transmission using MQTT over TLS 1.3 and AES-256 encryption</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Skills -->
+      <div class="card">
+        <p><i class="fas fa-tools stroke-transparent"></i>&nbsp;&nbsp;&nbsp;Skills</p>
+        <ul class="skills-grid">
+          <li>Python</li><li>R</li><li>C</li><li>Java</li>
+          <li>NetworkX</li><li>TShark</li><li>Network Analysis</li>
+          <li>MATLAB</li><li>RStudio</li><li>Machine Learning</li>
+          <li>Deep Learning</li><li>Data Collection</li>
+          <li>Cryptography</li><li>ZKP / Lattices</li>
+          <li>Web Dev (basics)</li><li>Computational Finance</li>
+        </ul>
+      </div>
+
+      <!-- Certificates & Awards -->
+      <div class="card">
+        <p><i class="fas fa-certificate stroke-transparent"></i>&nbsp;&nbsp;&nbsp;Certificates &amp; Awards</p>
+        <ul>
+          <li>
+            <p class="tags">DHIS2 Hackathon – Certificate of Participation<br>
+              <span> | <span>2025</span></span>
+            </p>
+          </li>
+          <li>
+            <p class="tags">PSEJ – Programme Sénégalais pour l'Entrepreneuriat des Jeunes<br>
+              <span>Certification | <span>2022</span></span>
+            </p>
+          </li>
+          <li>
+            <p class="tags">3rd Prize – Best Students Award<br>
+              <span> | <span>2022</span></span>
+            </p>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Languages & Interests -->
+      <div class="card">
+        <p><i class="fas fa-language stroke-transparent"></i>&nbsp;&nbsp;&nbsp;Languages &amp; Interests</p>
+        <ul>
+          <li><p class="tags" style="font-size:15px;">French – Native &nbsp;|&nbsp; English – Advanced (TOEFL in preparation)</p></li>
+        </ul>
+        <p style="font-weight:bolder; font-size:16px; padding-left:15px; margin-top:10px;">Interests</p>
+        <ul class="skills-grid" style="padding-left:15px;">
+          <li>Cybersecurity</li><li>Data Science</li><li>Finance</li><li>Entrepreneurship</li>
+        </ul>
+        <p style="font-weight:bolder; font-size:16px; padding-left:15px; margin-top:10px;">Hobbies</p>
+        <ul class="skills-grid" style="padding-left:15px;">
+          <li>Sport</li><li>Design</li><li>Infographic</li><li>Reading</li><li>Community Activities</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
